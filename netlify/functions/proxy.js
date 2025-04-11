@@ -3,7 +3,7 @@ export async function handler(event) {
 
   const targetUrl = "https://torrentio.strem.fun" + path.replace(/\/api/, "");
 
-  console.log(event);
+  // console.log(event);
 
   const res = await fetch(targetUrl, {
     method: httpMethod,
@@ -18,7 +18,7 @@ export async function handler(event) {
 
   return {
     statusCode: res.status,
-    // headers: res.headers.raw(), // raw headers
+    headers: res.headers, // raw headers
     body: responseBody,
   };
 }
