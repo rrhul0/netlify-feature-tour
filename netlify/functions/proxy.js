@@ -21,7 +21,7 @@ export async function handler(event) {
 
   return {
     statusCode: res.status,
-    headers: res.headers.raw(), // raw headers
+    // headers: res.headers.raw(), // raw headers
     body: responseBody,
   };
 }
