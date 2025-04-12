@@ -23,6 +23,9 @@ export async function handler(event) {
       "Access-Control-Allow-Headers": "*", // Allow all headers
       "content-type": "application/json",
     },
-    body: responseBody,
+    body: responseBody.replaceAll(
+      "https://torrentio.strem.fun",
+      "https://fluffy-mochi-cb0b21.netlify.app/"
+    ),
   };
 }
