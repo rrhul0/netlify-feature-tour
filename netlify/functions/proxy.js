@@ -18,7 +18,11 @@ export async function handler(event) {
 
   return {
     statusCode: res.status,
-    headers: res.headers, // raw headers
+    headers: {
+      "Access-Control-Allow-Origin": "*", // Allow all origins
+      "Access-Control-Allow-Headers": "*", // Allow all headers
+      "content-type": "application/json",
+    },
     body: responseBody,
   };
 }
