@@ -25,7 +25,7 @@ export async function handler(event) {
     },
     body: responseBody.replaceAll(
       "https://torrentio.strem.fun",
-      "https://fluffy-mochi-cb0b21.netlify.app/"
+      "https://fluffy-mochi-cb0b21.netlify.app/api"
     ),
   };
 }
